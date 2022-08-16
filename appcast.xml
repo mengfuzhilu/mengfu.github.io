@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
     <channel>
-        <title>auto_updater_example 测试 </title>
-        <description>Most recent updates to auto_updater_example</description>
+        <title>圣经桌面版 测试 </title>
+        <description>Most recent updates to 圣经桌面版</description>
         <language>zh</language>
         <item>
             <title>Version 1.1.0 版本</title>
@@ -10,11 +10,11 @@
                 https://gh.betterguitars.art/changlog.md
             </sparkle:releaseNotesLink>
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
-            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/WeChatMac.dmg"
-                       sparkle:edSignature="pbdyPt92pnPkzLfQ7BhS9hbjcV9/ndkzSIlWjFQIUMcaCNbAFO2fzl0tISMNJApG2POTkZY0/kJQ2yZYOSVgAA=="
+            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/flutter_bible2-1.0.0%2B1-macos.dmg"
+                       sparkle:edSignature="ZxMxmR6LXf5yM4GLpW4UKK5zUk2HG5kEIB22HypDAygFEXp4X+qFweNbVqAN2jB+cTQYoD1m0RXyCtfVn/f/Dw=="
                        sparkle:version="1.1.0"
                        sparkle:os="macos"
-                       length="13400992"
+                       length="33749564"
                        type="application/octet-stream" />
         </item>
         <item>
