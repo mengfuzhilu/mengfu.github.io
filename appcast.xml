@@ -3,7 +3,7 @@
     <channel>
         <title>auto_updater_example 测试 </title>
         <description>Most recent updates to auto_updater_example</description>
-        <language>cn</language>
+        <language>zh</language>
         <item>
             <title>Version 1.1.0 版本</title>
             <sparkle:releaseNotesLink>
