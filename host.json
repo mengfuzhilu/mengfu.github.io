@@ -2,6 +2,8 @@
 	"code": 200,
 	"msg": "成功",
 	"data": {
+		"type": 0,
+		"intro": "更新服务地址",
 		"iosurl": "https://api-ed2-ios.ed365.tv",
 		"andurl": "https://api-ed2-android.ed365.tv"
 	}
