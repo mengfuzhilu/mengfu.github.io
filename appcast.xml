@@ -5,16 +5,16 @@
         <description>Most recent updates to 圣经桌面版</description>
         <language>zh</language>
         <item>
-            <title>Version 1.1.0 版本</title>
+            <title>Version 1.0.0 版本</title>
             <sparkle:releaseNotesLink>
                 https://gh.betterguitars.art/changlog.md
             </sparkle:releaseNotesLink>
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
             <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/flutter_bible2-1.0.0%2B1-macos.dmg"
-                       sparkle:edSignature="ZxMxmR6LXf5yM4GLpW4UKK5zUk2HG5kEIB22HypDAygFEXp4X+qFweNbVqAN2jB+cTQYoD1m0RXyCtfVn/f/Dw=="
-                       sparkle:version="1.1.0"
+                       sparkle:edSignature="2RjkEgwKxI/unJiiMTvlMW0Fg4ZvymhigJNn075MutkWpTwAvSDsCNstOzfCblKrptQnmjuwaydZfEqGWyy1BA=="
+                       sparkle:version="1.0.0"
                        sparkle:os="macos"
-                       length="33749564"
+                       length="41536913"
                        type="application/octet-stream" />
         </item>
         <item>
