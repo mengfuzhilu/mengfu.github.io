@@ -10,12 +10,12 @@
                 https://gh.betterguitars.art/changlog.md
             </sparkle:releaseNotesLink>
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
-            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/flutter_bible2-1.0.0%2B1-macos.dmg"
-                       sparkle:edSignature="2RjkEgwKxI/unJiiMTvlMW0Fg4ZvymhigJNn075MutkWpTwAvSDsCNstOzfCblKrptQnmjuwaydZfEqGWyy1BA=="
+            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/bible_macos-1.0.0%2B1.zip"
+                       sparkle:edSignature="ZM+9FBndmk4xJaFF7ixg9P+Z2j+cofTxAp+K1Kr9RRa8d3w4h39Dg++qlBKKOAPvIJ47x5FZhYMX8DzU2gOqCQ=="
                        sparkle:version="1.0.0"
                        sparkle:os="macos"
-                       length="41536913"
-                       type="application/octet-stream" />
+                       length="41859145"
+                       type="application/zip" />
         </item>
         <item>
             <title>Version 1.1.0</title>
