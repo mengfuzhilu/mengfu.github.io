@@ -10,12 +10,12 @@
                 https://gh.betterguitars.art/changlog.html
             </sparkle:releaseNotesLink>
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
-            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/bible_macos-1.0.0%2B1.zip"
-                       sparkle:edSignature="ZM+9FBndmk4xJaFF7ixg9P+Z2j+cofTxAp+K1Kr9RRa8d3w4h39Dg++qlBKKOAPvIJ47x5FZhYMX8DzU2gOqCQ=="
+            <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/bibleDesktop_macos_1.0.0.dmg"
+                       sparkle:edSignature="LEEKLJ4ZxxoMvD2/a12o/i7/2NAMVu5BIeHDWuYZ0u88KT5kajomyMJhWUw9jlY5K3vPjD7FAgiFMwxSrdW0Cg=="
                        sparkle:version="1.1.0"
                        sparkle:os="macos"
-                       length="41859145"
-                       type="application/zip" />
+                       length="46276718"
+                       type="application/octet-stream" />
         </item>
         <item>
             <title>Version 1.0.0</title>
