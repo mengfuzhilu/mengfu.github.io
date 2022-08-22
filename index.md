@@ -6,5 +6,5 @@
 </audio>
 
 ### 视频
-<iframe src="//player.bilibili.com/player.html?aid=763204015&bvid=BV1s64y187Up&cid=413077855&page=1" scrolling="no" width="800px" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=763204015&bvid=BV1s64y187Up&cid=413077855&page=1" scrolling="no" width="600px" height="450px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
