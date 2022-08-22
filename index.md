@@ -1,40 +1,10 @@
-## Welcome to GitHub Pages
-欢迎来到我的个人主页!
+## 欢迎来到我的个人主页!
 
+###音频
 <audio id="audio" controls="" preload="none">
       <source id="mp3" src="https://cdn.zhuneiyun.cn/zhunei-audio/material/917ae9832a2e4a26a579350a99b009f4.mp3">
 </audio>
 
+###视频
 <iframe src="//player.bilibili.com/player.html?aid=763204015&bvid=BV1s64y187Up&cid=413077855&page=1" scrolling="no"  frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chinabluewu/chinabluewu.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
