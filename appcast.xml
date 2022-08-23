@@ -12,7 +12,7 @@
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
             <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/bibleDesktop_macos_1.0.0.dmg"
                        sparkle:edSignature="LEEKLJ4ZxxoMvD2/a12o/i7/2NAMVu5BIeHDWuYZ0u88KT5kajomyMJhWUw9jlY5K3vPjD7FAgiFMwxSrdW0Cg=="
-                       sparkle:version="1.1.0"
+                       sparkle:version="1.0.0"
                        sparkle:os="macos"
                        length="46276718"
                        type="application/octet-stream" />
@@ -25,7 +25,7 @@
             <pubDate>Sun, 16 Feb 2022 12:00:00 +0800</pubDate>
             <enclosure url="https://color-matters-test.oss-cn-shenzhen.aliyuncs.com/update_file/bible_desktop-windows-1.0.0.exe"
                        sparkle:dsaSignature="MEQCIGjaI6gDldGtBPkFYAgf3KdAXWYlNOq6fmP/jeEOW2VwAiBqftuNq75mFQbMKqYgl5zAipCB0bTMmIk+BQDjE1860g=="
-                       sparkle:version="1.1.0"
+                       sparkle:version="1.0.0"
                        sparkle:os="windows"
                        length="0"
                        type="application/octet-stream" />
