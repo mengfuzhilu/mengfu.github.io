@@ -1,0 +1,78 @@
+<h1 id="WOW-js"><a href="#WOW-js" class="headerlink" title="WOW.js "></a>WOW.js <a href="http://travis-ci.org/matthieua/WOW"><img src="https://secure.travis-ci.org/matthieua/WOW.svg?branch=master" alt="Build Status"></a></h1><p>Reveal CSS animation as you scroll down a page.<br>By default, you can use it to trigger <a href="https://github.com/daneden/animate.css">animate.css</a> animations.<br>But you can easily change the settings to your favorite animation library.</p>
+<p>Advantages:</p>
+<ul>
+<li>Smaller than other JavaScript parallax plugins, like Scrollorama (they do fantastic things, but can be too heavy for simple needs)</li>
+<li>Super simple to install, and works with animate.css, so if you already use it, that will be very fast to setup</li>
+<li>Fast execution and lightweight code: the browser will like it ;-)</li>
+<li>You can change the settings - <a href="#advanced-usage">see below</a></li>
+</ul>
+<p>Follow <a href="//twitter.com/mattaussaguel">@mattaussaguel</a> for updates as WOW evolves.</p>
+<h3 id="LIVE-DEMO-➫"><a href="#LIVE-DEMO-➫" class="headerlink" title="LIVE DEMO ➫"></a><a href="http://mynameismatthieu.com/WOW/">LIVE DEMO ➫</a></h3><h2 id="Live-examples"><a href="#Live-examples" class="headerlink" title="Live examples"></a>Live examples</h2><ul>
+<li><a href="http://www.materialup.com/">MaterialUp</a></li>
+<li><a href="https://www.fliplingo.com/">Fliplingo</a></li>
+<li><a href="http://www.streamlineicons.com/">Streamline Icons</a></li>
+<li><a href="http://www.microsoft.com/en-us/news/stories/garage/">Microsoft Stories</a></li>
+</ul>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>1.1.2</p>
+<h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><p>It just take seconds to install and use WOW.js!<br><a href="http://mynameismatthieu.com/WOW/docs.html">Read the documentation ➫</a></p>
+<h3 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h3><ul>
+<li><a href="https://github.com/daneden/animate.css">animate.css</a></li>
+</ul>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">  &lt;section class=&quot;wow slideInLeft&quot;&gt;&lt;/section&gt;
+  &lt;section class=&quot;wow slideInRight&quot;&gt;&lt;/section&gt;
+</code></pre>
+<ul>
+<li>JavaScript</li>
+</ul>
+<pre><code class="javascript">new WOW().init();
+</code></pre>
+<h3 id="Advanced-usage"><a href="#Advanced-usage" class="headerlink" title="Advanced usage"></a>Advanced usage</h3><ul>
+<li>HTML</li>
+</ul>
+<pre><code class="html">  &lt;section class=&quot;wow slideInLeft&quot; data-wow-duration=&quot;2s&quot; data-wow-delay=&quot;5s&quot;&gt;&lt;/section&gt;
+  &lt;section class=&quot;wow slideInRight&quot; data-wow-offset=&quot;10&quot;  data-wow-iteration=&quot;10&quot;&gt;&lt;/section&gt;
+</code></pre>
+<ul>
+<li>JavaScript</li>
+</ul>
+<pre><code class="javascript">var wow = new WOW(
+  {
+    boxClass:     &#39;wow&#39;,      // animated element css class (default is wow)
+    animateClass: &#39;animated&#39;, // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    }
+  }
+);
+wow.init();
+</code></pre>
+<h3 id="Asynchronous-content-support"><a href="#Asynchronous-content-support" class="headerlink" title="Asynchronous content support"></a>Asynchronous content support</h3><p>In IE 10+, Chrome 18+ and Firefox 14+, animations will be automatically<br>triggered for any DOM nodes you add after calling <code>wow.init()</code>. If you do not<br>like that, you can disable this by setting <code>live</code> to <code>false</code>.</p>
+<p>If you want to support older browsers (e.g. IE9+), as a fallback, you can call<br>the <code>wow.sync()</code> method after you have added new DOM elements to animate (but<br><code>live</code> should still be set to <code>true</code>). Calling <code>wow.sync()</code> has no side<br>effects.</p>
+<h2 id="Contribute"><a href="#Contribute" class="headerlink" title="Contribute"></a>Contribute</h2><p>The library is written in CoffeeScript, please update <code>wow.coffee</code> file.</p>
+<p>We use grunt to compile and minify the library:</p>
+<p>Install needed libraries</p>
+<pre><code>npm install
+</code></pre>
+<p>Get the compilation running in the background</p>
+<pre><code>grunt watch
+</code></pre>
+<p>Enjoy!</p>
+<h2 id="Bug-tracker"><a href="#Bug-tracker" class="headerlink" title="Bug tracker"></a>Bug tracker</h2><p>If you find a bug, please report it <a href="https://github.com/matthieua/WOW/issues">here on Github</a>!</p>
+<h2 id="Developer"><a href="#Developer" class="headerlink" title="Developer"></a>Developer</h2><p>Developed by Matthieu Aussaguel, <a href="http://mynameismatthieu.com/">mynameismatthieu.com</a></p>
+<ul>
+<li><a href="//twitter.com/mattaussaguel">@mattaussaguel</a></li>
+<li><a href="//github.com/matthieua">Github Profile</a></li>
+</ul>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>Thanks to everyone who has contributed to the project so far:</p>
+<ul>
+<li>Attila Oláh - <a href="//twitter.com/attilaolah">@attilaolah</a> - <a href="//github.com/attilaolah">Github Profile</a></li>
+<li><a href="//github.com/matthieua/WOW/graphs/contributors">and many others</a></li>
+</ul>
+<p>Initiated and designed by <a href="//www.webalys.com/">Vincent Le Moign</a>, <a href="//twitter.com/webalys">@webalys</a></p>

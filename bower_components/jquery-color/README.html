@@ -1,0 +1,144 @@
+<h1 id="jQuery-Color"><a href="#jQuery-Color" class="headerlink" title="jQuery.Color()"></a>jQuery.Color()</h1><h2 id="Using-jQuery-Color-in-Production"><a href="#Using-jQuery-Color-in-Production" class="headerlink" title="Using jQuery Color in Production"></a>Using jQuery Color in Production</h2><p>We release jQuery Color by itself, or in a bundle.  The extended names can be inclided as a jQuery Color plugin, or you can download the version of jQuery Color that includes the names.  Choose your build from the following list:</p>
+<p>Current Version: 2.1.1</p>
+<ul>
+<li>jQuery Color <a href="http://code.jquery.com/color/jquery.color-2.1.1.min.js">Compressed</a> <a href="http://code.jquery.com/color/jquery.color-2.1.1.js">Uncompressed</a></li>
+<li>jQuery Color Extended Names <a href="http://code.jquery.com/color/jquery.color.svg-names-2.1.1.min.js">Compressed</a> <a href="http://code.jquery.com/color/jquery.color.svg-names-2.1.1.js">Uncompressed</a></li>
+<li>jQuery Color &amp; Extended Names(previous two combined) <a href="http://code.jquery.com/color/jquery.color.plus-names-2.1.1.min.js">Compressed</a> <a href="http://code.jquery.com/color/jquery.color.plus-names-2.1.1.js">Uncompressed</a></li>
+</ul>
+<h2 id="How-to-build-and-test-jQuery-Color"><a href="#How-to-build-and-test-jQuery-Color" class="headerlink" title="How to build and test jQuery Color"></a>How to build and test jQuery Color</h2><p>First, get a copy of the git repo by running:</p>
+<pre><code class="shell">git clone git://github.com/jquery/jquery-color.git
+</code></pre>
+<p>Enter the directory and install the node dependencies:</p>
+<pre><code class="shell">cd jquery-color &amp;&amp; npm install
+</code></pre>
+<p>Make sure you have <code>grunt</code> installed by testing:</p>
+<pre><code class="shell">grunt -version
+</code></pre>
+<p>If not, run:</p>
+<pre><code class="shell">npm install -g grunt
+</code></pre>
+<p>To run tests locally, run <code>grunt</code>, and this will run the tests in PhantomJS.</p>
+<p>You can also run the tests in a browser by navigating to the <code>test/</code> directory, but first run <code>grunt</code> to install submodules.</p>
+<h2 id="Animated-colors"><a href="#Animated-colors" class="headerlink" title="Animated colors"></a>Animated colors</h2><p>This plugins installs a <a href="http://api.jquery.com/jQuery.cssHooks/"><code>cssHook</code></a> which allows jQuery’s <a href="http://api.jquery.com/animate"><code>.animate()</code></a> to animate between two colors.</p>
+<h2 id="Supported-Properties"><a href="#Supported-Properties" class="headerlink" title="Supported Properties"></a>Supported Properties</h2><p><code>backgroundColor</code>, <code>borderBottomColor</code>, <code>borderLeftColor</code>, <code>borderRightColor</code>, <code>borderTopColor</code>, <code>color</code>, <code>columnRuleColor</code>, <code>outlineColor</code>, <code>textDecorationColor</code>, <code>textEmphasisColor</code></p>
+<h2 id="Example-Use"><a href="#Example-Use" class="headerlink" title="Example Use"></a>Example Use</h2><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+div {
+background-color:#bada55;
+width:100px;
+border:1px solid green;
+}
+&lt;/style&gt;
+&lt;script src=&quot;http://code.jquery.com/jquery-1.6.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.color.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button id=&quot;go&quot;&gt;Simple&lt;/button&gt;
+&lt;button id=&quot;sat&quot;&gt;Desaturate&lt;/button&gt;
+  &lt;div id=&quot;block&quot;&gt;Hello!&lt;/div&gt;
+&lt;script&gt;
+jQuery(&quot;#go&quot;).click(function(){
+  jQuery(&quot;#block&quot;).animate({
+      backgroundColor: &quot;#abcdef&quot;
+  }, 1500 );
+});
+jQuery(&quot;#sat&quot;).click(function(){
+  jQuery(&quot;#block&quot;).animate({
+      backgroundColor: jQuery.Color({ saturation: 0 })
+  }, 1500 );
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="Supporting-other-properties"><a href="#Supporting-other-properties" class="headerlink" title="Supporting other properties"></a>Supporting other properties</h2><p>The <code>jQuery.Color.hook()</code> function can be called to support additional css properties as colors, and allow them to be animated.</p>
+<h2 id="Example-Use-1"><a href="#Example-Use-1" class="headerlink" title="Example Use"></a>Example Use</h2><pre><code class="javascript">// we want to animate SVG fill and stroke properties
+jQuery.Color.hook( &quot;fill stroke&quot; );
+</code></pre>
+<h2 id="The-jQuery-Color-Factory"><a href="#The-jQuery-Color-Factory" class="headerlink" title="The jQuery.Color Factory"></a>The jQuery.Color Factory</h2><p>The <code>jQuery.Color()</code> function allows you to create and manipulate color objects that are accepted by jQuery’s <code>.animate()</code> and <code>.css()</code> functions.</p>
+<ul>
+<li>Returns a new Color object, similar to <code>jQuery()</code> or <code>jQuery.Event</code></li>
+<li>Accepts many formats to create a new Color object with a <code>jQuery.Color.fn</code> prototype</li>
+</ul>
+<h3 id="Example-uses"><a href="#Example-uses" class="headerlink" title="Example uses:"></a>Example uses:</h3><pre><code class="javascript">// Parsing String Colors:
+jQuery.Color( &quot;#abcdef&quot; );
+jQuery.Color( &quot;rgb(100,200,255)&quot; );
+jQuery.Color( &quot;rgba(100,200,255,0.5)&quot; );
+jQuery.Color( &quot;aqua&quot; );
+
+// Creating Color Objects in Code:
+// use null or undefined for values you wish to leave out
+jQuery.Color( red, green, blue, alpha );
+jQuery.Color([ red, green, blue, alpha ]);
+jQuery.Color({ red: red, green: green, blue: blue, alpha: alpha });
+jQuery.Color({ hue: hue, saturation: saturation, lightness: lightness, alpha: alpha });
+
+// Helper to get value from CSS
+jQuery.Color( element, cssProperty );
+</code></pre>
+<h2 id="jQuery-Color-fn-x2F-prototype-x2F-the-Color-Object-methods"><a href="#jQuery-Color-fn-x2F-prototype-x2F-the-Color-Object-methods" class="headerlink" title="jQuery.Color.fn &#x2F; prototype &#x2F; the Color Object methods"></a>jQuery.Color.fn &#x2F; prototype &#x2F; the Color Object methods</h2><h3 id="Getters-x2F-Setters"><a href="#Getters-x2F-Setters" class="headerlink" title="Getters &#x2F; Setters:"></a>Getters &#x2F; Setters:</h3><pre><code class="javascript">red()             // returns the &quot;red&quot; component of the color ( Integer from 0 - 255 )
+red( val )        // returns a copy of the color object with the red set to val
+green()           // returns the &quot;green&quot; component of the color from ( Integer from 0 - 255 )
+green( val )      // returns a copy of the color object with the green set to val
+blue()            // returns the &quot;blue&quot; component of the color from ( Integer from 0 - 255 )
+blue( val )       // returns a copy of the color object with the blue set to val
+alpha()           // returns the &quot;alpha&quot; component of the color from ( Float from 0.0 - 1.0 )
+alpha( val )      // returns a copy of the color object with the alpha set to val
+hue()             // returns the &quot;hue&quot; component of the color ( Integer from 0 - 359 )
+hue( val )        // returns a copy of the color object with the hue set to val
+saturation()      // returns the &quot;saturation&quot; component of the color ( Float from 0.0 - 1.0 )
+saturation( val ) // returns a copy of the color object with the saturation set to val
+lightness()       // returns the &quot;lightness&quot; component of the color ( Float from 0.0 - 1.0 )
+lightness( val )  // returns a copy of the color object with the lightness set to val
+// all of the above values can also take strings in the format of &quot;+=100&quot; or &quot;-=100&quot;
+
+rgba() // returns a rgba &quot;tuple&quot; [ red, green, blue, alpha ]
+// rgba() setters: returns a copy of the color with any defined values set to the new value
+rgba( red, green, blue, alpha )
+rgba({ red: red, green: green, blue: blue, alpha: alpha })
+rgba([ red, green, blue, alpha ])
+
+hsla() // returns a HSL tuple [ hue, saturation, lightness, alpha ]
+// much like the rgb setter - returns a copy with any defined values set
+hsla( hue, saturation, lightness, alpha )
+hsla({ hue: hue, saturation: saturation, lightness: lightness, alpha: alpha )
+hsla([ hue, saturation, lightness, alpha ])
+</code></pre>
+<h3 id="String-Methods"><a href="#String-Methods" class="headerlink" title="String Methods:"></a>String Methods:</h3><pre><code class="javascript">toRgbaString() // returns a css string &quot;rgba(255, 255, 255, 0.4)&quot;
+toHslaString() // returns a css string &quot;hsla(330, 75%, 25%, 0.4)&quot;
+toHexString( includeAlpha ) // returns a css string &quot;#abcdef&quot;, with &quot;includeAlpha&quot; uses &quot;#rrggbbaa&quot; (alpha *= 255)
+</code></pre>
+<p>The <code>toRgbaString</code> and <code>toHslaString</code> methods will only include the alpha channel if it is not <code>1</code>. They will return <code>rgb(...)</code> and <code>hsl(...)</code> strings if the alpha is set to <code>1</code>. </p>
+<h3 id="Working-with-other-colors"><a href="#Working-with-other-colors" class="headerlink" title="Working with other colors:"></a>Working with other colors:</h3><pre><code class="javascript">transition( othercolor, distance ) // the color distance ( 0.0 - 1.0 ) of the way between this color and othercolor
+blend( othercolor ) // Will apply this color on top of the other color using alpha blending
+is( othercolor ) // Will determine if this color is equal to all defined properties of othercolor
+</code></pre>
+<h2 id="jQuery-Color-properties"><a href="#jQuery-Color-properties" class="headerlink" title="jQuery.Color properties"></a>jQuery.Color properties</h2><h2 id="Internals-on-The-Color-Object"><a href="#Internals-on-The-Color-Object" class="headerlink" title="Internals on The Color Object"></a>Internals on The Color Object</h2><ul>
+<li>Internally, RGBA values are stored as <code>color._rgba[0] = red, color._rgba[1] = green, color._rgba[2] = blue, color._rgba[3] = alpha</code>.  However, please remember there are nice convenient setters and getters for each of these properties.</li>
+<li><code>undefined</code>&#x2F;<code>null</code> values for colors indicate non-existence. This signals the <code>transition()</code> function to keep whatever value was set in the other end of the transition. For example, animating to <code>jQuery.Color([ 255, null, null, 1 ])</code> would only animate the red and alpha values of the color.</li>
+</ul>
+<p>###<code>jQuery.Color.names</code></p>
+<p>A list of named colors is stored on the <code>jQuery.Color.names</code> object.  The value they contain should be parseable by <code>jQuery.Color()</code>. All names on this object should be lowercased.  I.E. <code>jQuery.Color(&quot;Red&quot;)</code> is the same as doing <code>jQuery.Color( jQuery.Color.names[&quot;red&quot;] );</code></p>
+<p>There is also a named color <code>&quot;_default&quot;</code> which by default is white, this is used for situations where a color is unparseable.</p>
+<p>###<code>&quot;transparent&quot;</code></p>
+<p>A special note about the color <code>&quot;transparent&quot;</code> - It returns <code>null</code> for red green and blue unless you specify colors for these values.</p>
+<pre><code class="javascript">jQuery.Color(&quot;#abcdef&quot;).transition(&quot;transparent&quot;, 0.5)
+</code></pre>
+<p>Animating to or from the value <code>&quot;transparent&quot;</code> will still use “#abcdef” for red green and blue.</p>
+<p>##HSLA Support</p>
+<p>If a color is created using any of the HSLA functions or parsers, it will keep the <code>_rgba</code> array up to date as well as having a <code>_hsla</code> array.  Once an RGBA operation is performed on HSLA, however, the <code>_hsla</code> cache is removed and all operations will continue based off of rgb (unless you go back into HSLA). The <code>._hsla</code> array follows the same format as <code>._rbga</code>, <code>[hue, saturation, lightness, alpha ]</code>.  If you need to build an HSLA color from an HSLA array, <code>jQuery.Color().hsla( array )</code> works for that purpose.</p>
+<p><strong>Colors with 0 saturation, or 100%&#x2F;0% lightness will be stored with a hue of 0</strong></p>
+<p>##Extensibility</p>
+<p>It is possible for you to add your own functions to the color object.  For instance, this function will tell you if its better to use black or white on a given background color.</p>
+<pre><code class="javascript">// method taken from https://gist.github.com/960189
+jQuery.Color.fn.contrastColor = function() {
+    var r = this._rgba[0], g = this._rgba[1], b = this._rgba[2];
+    return (((r*299)+(g*587)+(b*144))/1000) &gt;= 131.5 ? &quot;black&quot; : &quot;white&quot;;
+};
+
+// usage examples:
+jQuery.Color(&quot;#bada55&quot;).contrastColor(); // &quot;black&quot;
+element.css( &quot;color&quot;, jQuery.Color( element, &quot;backgroundColor&quot; ).contrastColor() );
+</code></pre>
